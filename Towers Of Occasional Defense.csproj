@@ -92,6 +92,8 @@
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\NavMeshAI.cs" />
     <Compile Include="Assets\Scripts\RunTimeBake.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\TowerPlacing.cs" />
     <Compile Include="Assets\Scripts\TowerScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,7 @@ public class TowerScript : MonoBehaviour
     public float fireRate = 0.5f;
     float timer;
     public float maxTowerRange = 40;
+    public int searchRange = 1000;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +25,7 @@ public class TowerScript : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, maxTowerRange);
+        //Kobery code
     }
 
 
@@ -31,52 +33,47 @@ public class TowerScript : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (target == null)
-        {
+        
 
-            int searchRange = 1;
-            Collider[] neighbours = Physics.OverlapSphere(transform.position, searchRange);
-                    Debug.Log("start search");
-            foreach (Collider guy in neighbours)
-            {
-
-                if (guy != null)
-                {
-                    if (guy.tag == "Enemy")
-                    {
-
-                        Gizmos.DrawWireSphere(transform.position, searchRange);
-
-                        target = guy.transform;
-                        searchRange = 1;
-                        Debug.Log("end search");
-
-
-                    }
-                    else
-                    {
-                        Debug.Log("found incorrect object");
-                    }
-                }
-            }
-
-            if (target == null)
-            {
-                if (searchRange < maxTowerRange)
-                {
-                    searchRange += 2;
-                }
-
-            }
-
-        }
-        else
+        if(target != null)
         {
             if (timer >= fireRate)
             {
-                GameObject missile = Instantiate(projectile, transform.position, transform.rotation);
-                missile.GetComponent<Rigidbody>().AddForce((target.position - transform.position).normalized * projectileSpeed * Time.deltaTime);
+                GameObject missile = Instantiate(projectile, transform.position + new Vector3(0, 5, 0), transform.rotation);
+                missile.GetComponent<Rigidbody>().AddForce((target.position - missile.transform.position).normalized * projectileSpeed * Time.deltaTime,ForceMode.Impulse);
+                Destroy(missile, 3);
                 timer = 0;
+            }
+        }
+        else
+        {
+            SearchForTarget();
+        }
+    }
+
+
+    public void SearchForTarget()
+    {
+        Collider[] neighbours = Physics.OverlapSphere(transform.position, searchRange, 1 << 9);
+        Debug.Log("start search");
+        foreach (Collider guy in neighbours)
+        {
+            if (guy != null)
+            {
+                if (guy.tag == "Enemy")
+                {
+
+
+
+                    target = guy.transform;
+                    Debug.Log("end search");
+                    break;
+
+                }
+                else
+                {
+                    Debug.Log("found incorrect object");
+                }
             }
         }
     }

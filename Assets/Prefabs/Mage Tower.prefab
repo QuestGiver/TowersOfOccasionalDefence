@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65113167028655448}
   - component: {fileID: 23519721172962652}
   - component: {fileID: 114650108752743044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mage Tower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4049991630846272}
   - component: {fileID: 114087560371671326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4136619263308236}
   - component: {fileID: 33679040254919400}
   - component: {fileID: 23330852509980234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: towerBalcony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4820411142815348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: towerBalcony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4183255272626558}
   - component: {fileID: 33925380538235172}
   - component: {fileID: 23814913478643558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: towerSquarePoles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4045512975483466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: towerSquarePoles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135037565188152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.52, y: 0.5, z: 18.3}
+  m_LocalPosition: {x: 10.78, y: 0.5, z: 31.47}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children:
   - {fileID: 4049991630846272}
@@ -353,3 +353,6 @@ MonoBehaviour:
   HpCurrent: 0
   projectile: {fileID: 1806022544208308, guid: c5132cd84fddc0e44bc09a01d3f576eb, type: 2}
   projectileSpeed: 1000
+  fireRate: 1
+  maxTowerRange: 40
+  searchRange: 100
