@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Towers Of Occasional Defense", "Towers Of Occasional Defense.csproj", "{1B4AE0B3-0B58-26BF-99CB-45E8B1712DDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Towers Of Occasional Defense.Editor", "Towers Of Occasional Defense.Editor.csproj", "{80C8A826-7385-B519-DB8F-C43E79D28202}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B4AE0B3-0B58-26BF-99CB-45E8B1712DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4AE0B3-0B58-26BF-99CB-45E8B1712DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4AE0B3-0B58-26BF-99CB-45E8B1712DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4AE0B3-0B58-26BF-99CB-45E8B1712DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C8A826-7385-B519-DB8F-C43E79D28202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C8A826-7385-B519-DB8F-C43E79D28202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C8A826-7385-B519-DB8F-C43E79D28202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C8A826-7385-B519-DB8F-C43E79D28202}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
